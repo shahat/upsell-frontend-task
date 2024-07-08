@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  import Required Lato Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="./assits/css/fontawesome.min.css">
+    <!-- main style -->
+    <link rel="stylesheet" href="./assits/css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--################################ Start Top Menue ################################-->
+    <div class="topMenue">
+        <a href="#" class="topMenue__link" onclick="setActive(this)">product details</a>
+        <a href="#" class="topMenue__link topMenue__link--active" onclick="setActive(this)">reviews ( 50 )</a>
+        <a href="#" class="topMenue__link" onclick="setActive(this)">shipping & payment </a>
+    </div>
+    <!--################################ End Top Menue ################################-->
+    <hr class="divider">
+    <!--################################ Total Reviews start ################################-->
+    <div class="totalReviews">
+        <section class="averageRating">
+            <h2 class="averageRating--title">Total review rate </h2>
+            <p class="averageRating--desc">Average rating ( 10 review & 125 Rating ) </p>
+            <div class="avarageRatting--starContent">
+                <div class="averageRating--ratingOuter">
+                    <div class="averageRating--ratingInner">
+                    </div>
+                </div> <span class="averageRating--ratingValue"> 4.8/5 </span>
+            </div>
+
+            <button type="button" class="averageRating-btn">Write a customer review</button>
+        </section>
+
+        <section class="totalReviews__starsPercentage">
+            <!-- Dynamic content -->
+        </section>
+    </div>
+    <!--################################ End Total Reviews ################################-->
+    <hr class="divider divider--full">
+    <!--################################ Customer Reviews #################################-->
+    <div class="customerReviews container">
+        <!-- rating stars -->
+        <div class="averageRating--ratingOuter">
+            <div class="averageRating--ratingInner">
+            </div>
+        </div>
+        <!-- user review -->
+        <div>
+            <section class="customerDetails">
+
+                <div class="customerDetails--review">
+                    <h4> Its really amazing</h4>
+                    <p class=""> By Sara macknail</p>
+                </div>
+                <div class="customerDetails--action flexBetweenCenter">
+                    <div id="likeButton" class="reactionButton" onclick="userReact('like')">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <span class="likeCounts">2</span>
+                    </div>
+                    <span class="verticalSpacer"></span>
+                    <div id="dislikeButton" class="reactionButton" onclick="userReact('dislike')">
+                        <i class="fa-solid fa-thumbs-down"></i>
+                        <span class="disLikeCounts">0</span>
+                    </div>
+                </div>
+            </section>
+            <section class="customerReviewDetails">
+                <div class="customerReviewDetails--sections">
+                    <h5>Advatages</h5>
+                    <p> Color , Size </p>
+                </div>
+                <div class="customerReviewDetails--sections">
+                    <h5>Disadvatages</h5>
+                    <p> Material quality </p>
+                </div>
+                <div class="customerReviewDetails--sections">
+                    <h5>Review</h5>
+                    <p>What sets 5 Star Cloth apart from other brands is their ability to create timeless pieces that
+                        never
+                        go out of style. Their designs are sophisticated and elegant, catering to individuals who
+                        appreciate
+                        refined fashion. Whether it's a formal event or a casual outing, their clothing effortlessly
+                        elevates any ensemble.</p>
+                </div>
+
+            </section>
+        </div>
+    </div>
+    <!-- ################################ End Customer Reviews ################################ -->
+    <!-- images  -->
+    <section class="productImages container">
+        <div class="productImages--imgContainer">
+            <img src="./assits/images/product1.jpeg" alt="product image">
+        </div>
+        <div class="productImages--imgContainer">
+            <img src="./assits/images/product2.jpeg" alt="product image">
+        </div>
+        <div class="productImages--imgContainer">
+            <img src="./assits/images/product1.jpeg" alt="product image">
+        </div>
+        <div class="productImages--imgContainer">
+            <img src="./assits/images/product2.jpeg" alt="product image">
+        </div>
+    </section>
+    <!-- fontawesome -->
+    <script src="./assits/js/all.min.js"></script>
+    <script src="./assits/js/index.js"></script>
+</body>
+
+</html>

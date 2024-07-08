@@ -1,0 +1,367 @@
+/* Author: Mohamed Elshaht 
+   Company : Upsell 
+   Date : 7 / 7 / 2024
+*/
+/* ========================= universal styles ======================  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+/* ===== Variables ===== */
+:root {
+  --mainColor: #262626;
+  --secondColor: #9d9d9d;
+  --descColor: #555555;
+  --dividerColor: #9d9d9d5f;
+  --goldenColor: #f9a825;
+  --btnBorder: #434343;
+  --progressColor: #4172dc;
+  --likeButtonColor: #c4c4c4;
+}
+/* ======================= body styles ======================== */
+body {
+  font-family: lato, sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden !important;
+}
+/* ========== Custome classes =========== */
+.container {
+  padding-top: 50px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.flexBetweenCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ========================= Top Menue ======================= */
+.topMenue {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto 20px auto;
+  font-size: 14px;
+}
+
+.topMenue__link {
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: var(--secondColor);
+  text-transform: uppercase;
+}
+
+.topMenue__link:hover {
+  color: var(--mainColor);
+}
+.topMenue__link--active {
+  color: var(--mainColor);
+}
+
+.divider {
+  border: 0.5px solid var(--dividerColor);
+  margin: auto;
+  width: 90%;
+}
+.divider--full {
+  width: 100%;
+}
+
+/* ========================= Total Review ======================= */
+.totalReviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 75%;
+  padding: 50px 0 50px 0;
+  margin: auto;
+}
+.averageRating {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.averageRating--title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.5px;
+  color: var(--mainColor);
+  margin: 0 0 10px 0;
+}
+.averageRating--desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: var(--descColor);
+}
+
+/* =========== Rating Stars =========== */
+.avarageRatting--starContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.averageRating--ratingOuter {
+  position: relative;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.averageRating--ratingOuter::before {
+  content: "\2605 \2605 \2605 \2605 \2605";
+  color: var(--secondColor);
+}
+
+.averageRating--ratingInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.averageRating--ratingInner::before {
+  content: "\2605 \2605 \2605 \2605 \2605";
+  color: var(--goldenColor);
+}
+
+.averageRating--ratingValue {
+  display: inline-block;
+  padding-left: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: var(--descColor);
+}
+.averageRating-btn {
+  display: block;
+  padding: 8px 20px;
+  outline: none;
+  border: 2px solid var(--btnBorder);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--descColor);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.averageRating-btn:hover {
+  color: white;
+  border: 2px solid var(--mainColor);
+  background-color: var(--mainColor);
+}
+
+/* ====== Rating Progress Right section ====== */
+
+.totalReviews__starsPercentage {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 450px;
+}
+.ratingContainer {
+  width: 80%;
+  margin: 5px 0;
+}
+/* === progress bar ===  */
+.ratingContainer--progress,
+.ratingContainer--progressValue {
+  display: inline-block;
+  border-radius: 2.5px;
+  height: 5px;
+}
+.ratingContainer--progress {
+  position: relative;
+  background-color: var(--dividerColor);
+  margin: 0 10px;
+  width: 60%;
+}
+.ratingContainer--progressValue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--progressColor);
+  width: 60%;
+}
+/* ==== End progress bar ==== */
+.notVisable {
+  visibility: hidden;
+}
+.ratingContainer--title,
+.ratingContainer--percentage {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+  color: var(--descColor);
+}
+/* ======================= End Total Review ======================= */
+/* ======================= Customer Reviews ======================= */
+.customerReviews {
+  display: flex;
+  justify-content: space-between;
+}
+.customerDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.customerDetails--review h4 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--mainColor);
+}
+
+.customerDetails--review p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--descColor);
+}
+/* ================= action button  ===================== */
+.customerDetails--action {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--likeButtonColor);
+  color: var(--likeButtonColor);
+}
+
+.customerDetails--action .verticalSpacer {
+  display: inline-block;
+  margin: 0 10px;
+  width: 1px;
+  height: 20px;
+  background-color: var(--likeButtonColor);
+}
+
+#likeButton,
+#dislikeButton {
+  cursor: pointer;
+}
+
+.customerDetails--action .likeCounts,
+.customerDetails--action .disLikeCounts {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--mainColor);
+  padding-left: 5px;
+}
+.active {
+  color: var(--mainColor);
+}
+/* ===================== End action button ==================== */
+
+.customerReviewDetails {
+  margin: 20px 0 0 10px;
+}
+
+.customerReviewDetails--sections {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  margin-bottom: 15px;
+}
+.customerReviewDetails--sections h5 {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--secondColor);
+}
+.customerReviewDetails--sections p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--mainColor);
+}
+
+.customerReviewDetails--sections:last-child p {
+  line-height: 28px;
+}
+
+/* ============================= images Section =========================== */
+.productImages {
+  display: flex;
+  justify-content: start;
+}
+.productImages--imgContainer {
+  margin: 0 10px 100px 0;
+  width: 75px;
+  height: 80px;
+}
+.productImages--imgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================= Media Queries ======================== */
+/* Mobile First Styles (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-inline: 20px;
+    width: 100%;
+  }
+  .topMenue {
+    flex-direction: column;
+    width: 100%;
+    padding-inline: 20px;
+  }
+  /* ===================== Total Reviews ===================== */
+  .totalReviews {
+    flex-direction: column;
+    align-items: start;
+    overflow: hidden;
+  }
+
+  .totalReviews__starsPercentage {
+    align-items: start;
+    padding-top: 20px;
+  }
+  .averageRating-btn {
+    margin-top: 20px;
+  }
+  .customerReviewDetails {
+    margin: 0;
+  }
+  .customerReviews {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .customerReviewDetails {
+    padding-top: 20px;
+  }
+  .customerReviewDetails--sections {
+    display: grid;
+    grid-template-columns: 12fr;
+    margin-bottom: 15px;
+  }
+
+  /* ====== customer reviews ===== */
+  .customerDetails {
+    margin-left: 0;
+  }
+}
+
+/* Tablet Styles (from 600px to 900px) */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .topMenue {
+    width: 80%;
+  }
+
+  .totalReviews__starsPercentage {
+    width: 600px;
+  }
+  .ratingContainer--progressValue {
+    width: 50%;
+  }
+}
